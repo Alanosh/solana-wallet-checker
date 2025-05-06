@@ -1,0 +1,22 @@
+{
+  "name": "Solana Wallet Checker",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    }
+  },
+  "postCreateCommand": "pip install --upgrade pip && pip install solana==0.34.3 bip_utils==2.9.3 aiohttp==3.10.10 cryptography==43.0.3 tenacity==9.0.0 argparse",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  },
+  "remoteUser": "vscode",
+  "containerEnv": {
+    "SOLANA_RPC_URL": "https://api.mainnet-beta.solana.com"
+  }
+}
